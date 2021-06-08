@@ -70,10 +70,10 @@ const ModalLogin = () => {
         }
         <Form>
           <Form.Group controlId="formBasicEmail">
-            <Form.Control name="email" onChange={e => onChange(e)} type="email" placeholder="Email" />
+            <Form.Control className="form-input" name="email" onChange={e => onChange(e)} type="email" placeholder="Email" />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
-            <Form.Control name="password" onChange={e => onChange(e)} type="password" placeholder="Password" />
+            <Form.Control className="form-input" name="password" onChange={e => onChange(e)} type="password" placeholder="Password" />
           </Form.Group>
           <Button onClick={e => onSubmit(e)} className="btn-modal" variant="primary" type="submit" block>
             Login

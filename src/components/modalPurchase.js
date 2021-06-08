@@ -66,7 +66,7 @@ const ModalPurchase = ({ isVisible, onHide, filmId, title }) => {
         }
         <Form>
           <Form.Group controlId="formBasicaccountNumber">
-            <Form.Control name="accountNumber" onChange={onChange} type="number" placeholder="Input your account number" />
+            <Form.Control className="form-input" name="accountNumber" onChange={onChange} type="number" placeholder="Input your account number" />
           </Form.Group>
             <div className="btn btn-attachment cursor-pointer mb-3" onClick={() => hiddenFileInput.current.click()}>
               Attach payment

@@ -96,11 +96,11 @@ export default function AddFilm() {
         <div className="d-flex align-items-center">
           <Form.Group className="flex-grow-1 mr-3">
             <Form.Label>Title</Form.Label>
-            <Form.Control type="text" name="title" placeholder="title" onChange={onChange} />
+            <Form.Control className="form-input" type="text" name="title" placeholder="title" onChange={onChange} />
           </Form.Group>
           <Form.Group onClick={() => hiddenFileInput.current.click()}>
             <Form.Label>Thumbnail</Form.Label>
-            <Form.Control type="text" placeholder="Attach Thumbnail" img src="/frame1.svg" disabled value={formData.thumbnail && formData.thumbnail[0] ? formData.thumbnail[0].name : ''} className="cursor-pointer" />
+            <Form.Control style={{background: "#D2D2D240"}} type="text" placeholder="Attach Thumbnail" img src="/frame1.svg" disabled value={formData.thumbnail && formData.thumbnail[0] ? formData.thumbnail[0].name : ''} className="cursor-pointer" />
           </Form.Group>
           <Form.Group>
             <Form.File ref={hiddenFileInput} label="Thumbnail" name="thumbnail" onChange={onChange} style={{ display: "none" }} />
@@ -108,7 +108,7 @@ export default function AddFilm() {
         </div>
         <Form.Group>
           <Form.Label>Category</Form.Label>
-          <Form.Control as="select" custom name="categoryId" onChange={onChange}>
+          <Form.Control as="select" className="form-input" custom name="categoryId" onChange={onChange}>
             {
               categories.map(category => (
                 <option value={category.id} key={category.id}>{category.name}</option>
@@ -118,15 +118,15 @@ export default function AddFilm() {
         </Form.Group>
         <Form.Group>
           <Form.Label>Price</Form.Label>
-          <Form.Control type="text" name="price" onChange={onChange} />
+          <Form.Control className="form-input" type="text" name="price" onChange={onChange} />
         </Form.Group>
         <Form.Group>
           <Form.Label>Link Film</Form.Label>
-          <Form.Control type="text" name="filmUrl" onChange={onChange} />
+          <Form.Control className="form-input" type="text" name="filmUrl" onChange={onChange} />
         </Form.Group>
         <Form.Group>
           <Form.Label>Description</Form.Label>
-          <Form.Control as="textarea" rows={3} name="description" onChange={onChange} />
+          <Form.Control as="textarea" rows={3} className="form-input" name="description" onChange={onChange} />
         </Form.Group>
         <div className="d-flex flex-row-reverse">
           <Button className="mt-4 btn-add-film" onClick={handleCreateFilm}>Add Film</Button>
